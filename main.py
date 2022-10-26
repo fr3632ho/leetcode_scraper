@@ -4,9 +4,6 @@ import bs4
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.select import Select
-
-
 
 # Get json data form leetcode
 API_ENDPOINT = "https://leetcode.com/api/problems/algorithms/"
@@ -54,13 +51,19 @@ def select_all_button():
 Fetch the wanted problems from neetcode.io and 
 write these to file 'wanted_problems'.
 '''
-def fetch_wanted_problems():    
+def fetch_wanted_problems() -> dict:    
     # load neetcode    
     driver.get(NEETCODE_ENDPOINT)    
     time.sleep(2)
     select_all_button()
+
+    # containers = driver.find_elements(by = By.CLASS_NAME, value = 'ng-star-inserted')        
+    # for elem in containers:    
+    #     names = elem.find_elements(by = By.CLASS_NAME, value=r'ng-tns-c25-55')                
+    #     print(names)
+
+    # return dict()        
     hrefs = driver.find_elements(by = By.XPATH,value="//a[@href]")
-    
     filtered_problems = []
     pattern = re.compile('(\/*[0-9a-z\-]*\/?)$')          
     for element in hrefs:
@@ -75,26 +78,21 @@ def fetch_wanted_problems():
     with open(JSON_WANTED_PATH, 'w', encoding='utf-8') as file:    
         print("Dumping {} Leetcode problems found on neetcode.io to file".format(len(filtered_problems)), file.name)    
         json.dump(wanted, file, ensure_ascii=False, indent=4)    
-    # TODO perform logging?
+    return wanted
 
-def fetch_leetcode_data():
+def fetch_leetcode_data() -> dict:
     # Write to file and save data from leetcode
+    response = requests.get(API_ENDPOINT)
+    data_json = response.json() 
     with open(JSON_DATA_PATH, 'w', encoding='utf-8') as file:
         json.dump(data_json, file, ensure_ascii=False, indent=4)
         print("Dumped API contents into",file.name)
+    return data_json
 
+def main():           
+    wanted = set(fetch_wanted_problems()['problems'])    
+    data_json = fetch_leetcode_data()
 
-def main():    
-    response = requests.get(API_ENDPOINT)
-    data_json = response.json()        
-
-    fetch_wanted_problems()
-    fetch_leetcode_data()
-
-    # Read from the file containing wanted problems
-    with open(JSON_WANTED_PATH, 'r') as file:
-        wanted = set(json.load(file)['problems'])                       
-    
     filtered_problems = []
     for problem_data in data_json[PROBLEM_KEY]:
         # Need to filter the data to only take problems that we want
@@ -102,6 +100,9 @@ def main():
         if problem_data[PROBLEM_STAT_KEY][PROBLEM_TITLE_SLUG_KEY] in wanted:
             filtered_problems.append(create_problem_dictionary(problem_data))
     
+    # TODO we need to download the description of each problem to one page
+    # 
+
 if __name__ == "__main__":
     try:
         main()
