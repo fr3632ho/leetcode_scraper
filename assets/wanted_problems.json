@@ -1,5 +1,5 @@
 {
-    "problems": [
+    "Arrays & Hashing": [
         "contains-duplicate",
         "valid-anagram",
         "replace-elements-with-greatest-element-on-right-side",
@@ -45,7 +45,9 @@
         "check-if-a-string-contains-all-binary-codes-of-size-k",
         "range-sum-query-2d-immutable",
         "non-decreasing-array",
-        "first-missing-positive",
+        "first-missing-positive"
+    ],
+    "Two Pointers": [
         "valid-palindrome",
         "valid-palindrome-ii",
         "minimum-difference-between-highest-and-lowest-of-k-scores",
@@ -61,7 +63,9 @@
         "rotate-array",
         "array-with-elements-not-equal-to-average-of-neighbors",
         "boats-to-save-people",
-        "trapping-rain-water",
+        "trapping-rain-water"
+    ],
+    "Sliding Window": [
         "best-time-to-buy-and-sell-stock",
         "longest-substring-without-repeating-characters",
         "longest-repeating-character-replacement",
@@ -71,7 +75,9 @@
         "minimum-size-subarray-sum",
         "find-k-closest-elements",
         "minimum-window-substring",
-        "sliding-window-maximum",
+        "sliding-window-maximum"
+    ],
+    "Stack": [
         "valid-parentheses",
         "baseball-game",
         "implement-stack-using-queues",
@@ -88,7 +94,9 @@
         "remove-all-adjacent-duplicates-in-string-ii",
         "132-pattern",
         "maximum-frequency-stack",
-        "largest-rectangle-in-histogram",
+        "largest-rectangle-in-histogram"
+    ],
+    "Binary Search": [
         "binary-search",
         "search-insert-position",
         "guess-number-higher-or-lower",
@@ -105,7 +113,9 @@
         "populating-next-right-pointers-in-each-node",
         "search-suggestions-system",
         "split-array-largest-sum",
-        "median-of-two-sorted-arrays",
+        "median-of-two-sorted-arrays"
+    ],
+    "Linked List": [
         "reverse-linked-list",
         "merge-two-sorted-lists",
         "palindrome-linked-list",
@@ -127,7 +137,9 @@
         "insertion-sort-list",
         "lru-cache",
         "merge-k-sorted-lists",
-        "reverse-nodes-in-k-group",
+        "reverse-nodes-in-k-group"
+    ],
+    "Trees": [
         "binary-tree-inorder-traversal",
         "invert-binary-tree",
         "maximum-depth-of-binary-tree",
@@ -157,10 +169,14 @@
         "binary-search-tree-iterator",
         "convert-bst-to-greater-tree",
         "binary-tree-maximum-path-sum",
-        "serialize-and-deserialize-binary-tree",
+        "serialize-and-deserialize-binary-tree"
+    ],
+    "Tries": [
         "implement-trie-prefix-tree",
         "design-add-and-search-words-data-structure",
-        "word-search-ii",
+        "word-search-ii"
+    ],
+    "Heap / Priority Queue": [
         "kth-largest-element-in-a-stream",
         "last-stone-weight",
         "k-closest-points-to-origin",
@@ -175,7 +191,9 @@
         "longest-happy-string",
         "car-pooling",
         "find-median-from-data-stream",
-        "maximum-performance-of-a-team",
+        "maximum-performance-of-a-team"
+    ],
+    "Backtracking": [
         "subsets",
         "combination-sum",
         "combinations",
@@ -193,7 +211,9 @@
         "maximum-length-of-a-concatenated-string-with-unique-characters",
         "partition-to-k-equal-sum-subsets",
         "n-queens",
-        "n-queens-ii",
+        "n-queens-ii"
+    ],
+    "Graphs": [
         "island-perimeter",
         "verifying-an-alien-dictionary",
         "number-of-islands",
@@ -216,13 +236,17 @@
         "number-of-connected-components-in-an-undirected-graph",
         "graph-valid-tree",
         "minimum-number-of-days-to-eat-n-oranges",
-        "word-ladder",
+        "word-ladder"
+    ],
+    "Advanced Graphs": [
         "reconstruct-itinerary",
         "min-cost-to-connect-all-points",
         "network-delay-time",
         "swim-in-rising-water",
         "alien-dictionary",
-        "cheapest-flights-within-k-stops",
+        "cheapest-flights-within-k-stops"
+    ],
+    "1-D Dynamic Programming": [
         "climbing-stairs",
         "min-cost-climbing-stairs",
         "house-robber",
@@ -244,7 +268,9 @@
         "minimum-cost-for-tickets",
         "integer-break",
         "number-of-longest-increasing-subsequence",
-        "stickers-to-spell-word",
+        "stickers-to-spell-word"
+    ],
+    "2-D Dynamic Programming": [
         "unique-paths",
         "longest-common-subsequence",
         "best-time-to-buy-and-sell-stock-with-cooldown",
@@ -261,7 +287,9 @@
         "count-vowels-permutation",
         "burst-balloons",
         "number-of-ways-to-rearrange-sticks-with-k-sticks-visible",
-        "regular-expression-matching",
+        "regular-expression-matching"
+    ],
+    "Greedy": [
         "maximum-subarray",
         "jump-game",
         "jump-game-ii",
@@ -273,14 +301,18 @@
         "partition-labels",
         "valid-parenthesis-string",
         "eliminate-maximum-number-of-monsters",
-        "two-city-scheduling",
+        "two-city-scheduling"
+    ],
+    "Intervals": [
         "insert-interval",
         "merge-intervals",
         "non-overlapping-intervals",
         "meeting-rooms",
         "meeting-rooms-ii",
         "remove-covered-intervals",
-        "minimum-interval-to-include-each-query",
+        "minimum-interval-to-include-each-query"
+    ],
+    "Math & Geometry": [
         "rotate-image",
         "spiral-matrix",
         "set-matrix-zeroes",
@@ -296,7 +328,9 @@
         "detect-squares",
         "robot-bounded-in-circle",
         "zigzag-conversion",
-        "find-missing-observations",
+        "find-missing-observations"
+    ],
+    "Bit Manipulation": [
         "single-number",
         "number-of-1-bits",
         "counting-bits",
